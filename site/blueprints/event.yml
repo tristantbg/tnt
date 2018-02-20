@@ -1,0 +1,102 @@
+title: Spectacle
+pages: false
+files:
+  sortable: false
+  max: null
+  hide: false
+  sanitize: true
+  fields: null
+  size: null
+  width: null
+  height: null
+fields:
+  autoid:
+    type: hidden
+  prevnext: prevnext
+  tab1:
+    label: General
+    type:  tabs
+  title:
+    label: Titre
+    type: title
+    width: 3/4
+  live:
+    label: Visible par le public
+    type: switch
+    width: 1/4
+  dateStart:
+    label: Date de début
+    type: datetime
+    required: true
+    date:
+      format: DD/MM/YYYY
+    time:
+      format: 24
+      interval: 15
+    width: 1/2
+  timeEnd:
+    label: Date de fin
+    type: datetime
+    required: true
+    date:
+      format: DD/MM/YYYY
+    time:
+      format: 24
+      interval: 15
+    width: 1/2
+  distribution:
+    label: Distribution
+    type: structure
+    style: table
+    fields:
+      title:
+        label: Titre
+        type: text
+      text:
+        label: Contenu
+        type: textarea
+  text:
+    label: Chapeau
+    type: textarea
+  categories:
+    label: Categories
+    type: checkboxes
+    options: query
+    query:
+      page: categories
+      fetch: children
+      value: '{{uid}}'
+      text: '{{title}}'
+    width: 1/1
+  tab2:
+    label: Lieu & Billeterie
+    type:  tabs
+  place:
+    label: Lieu
+    type: quickselect
+    options: query
+    required: true
+    query:
+      page: places
+      fetch: children
+      value: '{{autoid}}'
+      text: '{{title}}'
+  price:
+    label: Prix
+    type: text
+    help: Optional
+    width: 1/2
+  ticketing:
+    label: Billeterie
+    type: url
+    help: Optional
+    width: 1/2
+  tab3:
+    label: Informations suppl.
+    type:  tabs
+  additionalText:
+    label: Texte
+    type: textarea
+  medias:
+    label: Medias
+    type: images

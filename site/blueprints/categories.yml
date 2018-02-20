@@ -1,0 +1,13 @@
+title: Categories
+files: false
+pages:
+  template: category
+  sort: title asc
+  num: zero
+deletable: false
+options:
+  url: false
+fields:
+  title:
+    label: Titre
+    type:  text

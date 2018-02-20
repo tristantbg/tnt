@@ -1,0 +1,32 @@
+title: Programmation
+options:
+  url: false
+pages:
+  template:
+    - event
+  num:
+    mode: default
+    display: null
+  max: null
+  sort: false
+  hide: false
+files: false
+fields:
+  title:
+    label: Titre
+    type: title
+  pageindex:
+    label: Index
+    type: index
+    options: children
+    columns:
+      title:
+        label: Title
+        width: 300
+      datestart: 
+        label: Start
+        width: 100
+      timeend:
+        label: End
+        width: 100
+      uid: Slug

@@ -1,0 +1,13 @@
+title: Informations
+pages: false
+files: false
+fields:
+  title:
+    label: Titre
+    type:  text
+  text:
+    label: Texte
+    type:  textarea
+  contact:
+    label: Contact
+    type: textarea

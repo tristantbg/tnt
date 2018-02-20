@@ -1,0 +1,22 @@
+title: Lieux
+deletable: false
+pages:
+  template:
+    - place
+  sort: title asc
+  num: zero
+  max: null
+  sort: false
+  hide: false
+files: false
+fields:
+  title:
+    label: Titre
+    type: title
+  pageindex:
+    label: Index des lieux
+    type: index
+    options: children
+    columns:
+      title: Title
+      uid: Slug

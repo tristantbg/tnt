@@ -1,0 +1,1 @@
+<xsl:template match="saveInside//text()"><xsl:value-of select="."/></xsl:template>
